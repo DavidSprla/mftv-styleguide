@@ -1,17 +1,141 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-:root {
-  /* 1rem === 10px, but remain responsive to user font size settings */
-  font-size: 62.5%;
+:root{
+	--vue: #41B883;
+	--react: #61DBFB;
+	--black: #0e0f0f;
+	--dark-gray: #242526;
+	--gray: #3a3b3c;
+	--light-gray: #b0b3b8;
+	--white: #e4e6eb;
+	--red: #E50914;
 
-  --navbar-width: 23.6rem;
-	--blue: #0000FF; 
+	--transition: all .238s ease;
+
+	font-size: 10px;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  /* default font size is 16px */
-  font-size: 1.6rem;
-  background-color: #efefef;
+*{
+  box-sizing:  border-box;
+  -ms-overflow-style: none;
+}
+
+html, body{
+  height: 100%;
   margin: 0;
+}
+
+body{
+	display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--black);
+}
+
+main{
+	flex: 1 0 auto;
+}
+
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 4rem 1.5rem 5.5rem 1.5rem;
+}
+
+.logo__tv{
+	position: relative;
+	padding: 1.5rem;
+	border: .3rem solid var(--black);
+	border-radius: .5rem;
+	box-shadow: inset 0 0 3rem var(--gray);
+}
+
+.logo__tv::before{
+	position: absolute;
+	content: '';
+	z-index: -1;
+	bottom: -1.8rem;
+	left: 0;
+	right: 0;
+	width: 6rem;
+	height: 1.6rem;
+	margin: 0 auto;
+	background-color: var(--dark-gray);
+	border-radius: 0 0 .2rem .2rem;
+	box-shadow: inset 0 .3rem .3rem var(--black);
+}
+
+.logo__tv::after{
+	position: absolute;
+	content: '';
+	z-index: 0;
+	bottom: -1.4rem;
+	left: 0;
+	right: 0;
+	width: .5rem;
+	height: .5rem;
+	margin: 0 auto;
+	background-color: var(--red);
+	border-radius: 50%;
+	box-shadow: 0 0 .3rem .1rem var(--red);
+}
+
+.logo__title{
+	color: var(--red);
+	font-size: 5rem;
+	font-weight: 500;
+	letter-spacing: .1em;
+	text-align: center;
+	text-shadow:
+      0 0 .5rem var(--red),
+      0 0 3rem var(--red);
+	user-select: none;
+	cursor: default;
+}
+
+footer{
+	flex-shrink: 0;
+	margin: 3rem 1.5rem 0;
+	padding: 3rem 1.5rem;
+	border-top: .1rem solid var(--dark-gray);
+	user-select: none;
+	cursor: default;
+}
+
+.footer__container{
+	max-width: 160rem;
+	margin: 0 auto;
+}
+
+.footer__author{
+	margin-top: 3rem;
+	font-weight: 500;
+	letter-spacing: .02em;
+	color: var(--gray);
+	text-align: center;
+}
+
+.footer__links{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__link > svg{
+	fill: var(--gray);
+	width: 3rem;
+	height: 3rem;
+	transition: var(--transition);
+}
+
+.footer__link:hover > svg{
+	fill: var(--light-gray);
 }
