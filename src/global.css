@@ -98,7 +98,7 @@ main{
 footer{
 	flex-shrink: 0;
 	margin: 3rem 1.5rem 0;
-	padding: 3rem 1.5rem;
+	padding: 4rem 1.5rem;
 	border-top: .1rem solid var(--dark-gray);
 	user-select: none;
 	cursor: default;
@@ -115,6 +115,11 @@ footer{
 	letter-spacing: .02em;
 	color: var(--gray);
 	text-align: center;
+}
+
+.footer__author-link{
+	text-decoration: none;
+	color: var(--gray);
 }
 
 .footer__links{
