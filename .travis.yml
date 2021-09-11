@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - node
+script:
+  - npm run build
+  - echo "AWS COMMIT - $TRAVIS_COMMIT"
+  - mkdir -p dist/@DavidSprla/styleguide/$TRAVIS_COMMIT
+  - mv dist/*.* dist/@DavidSprla/styleguide/$TRAVIS_COMMIT/
+deploy:
+  provider: s3
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  bucket: "$AWS_BUCKET"
+  skip_cleanup: true
+  acl: public_read
+  region: eu-central-1
+  local_dir: dist
+  cache-control: "max-age=31536000"
+  on:
+    branch: master
