@@ -12,6 +12,6 @@ This app demonstrates [Micro Frontends](https://martinfowler.com/articles/micro-
 5. **Styleguide** (Current repo): https://github.com/DavidSprla/mftv-styleguide
 > Contains global css
 ## Demo
-https://mftv-app.vercel.app/
+https://mftv.herokuapp.com
 ## Schema
 ![MFTV-schema](https://user-images.githubusercontent.com/43985126/132562953-0e9be27a-43fa-49ea-9eef-dee1ece2dbe4.png)
